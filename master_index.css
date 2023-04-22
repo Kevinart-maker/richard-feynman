@@ -1,18 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 *{
-    /* transition: all 1s ease-in-out; */
+    transition: all 1s ease-in-out;
     box-sizing: border-box;
-    /* background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: transparent; */
 }
 
 html{
@@ -31,14 +21,10 @@ body{
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* background: transparent;
-    background-color: rgba(2, 2, 2, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px) saturation(80%); */
     color: white;
     font-size: 20px;
     display: flex;
-    gap: 28%;
+    justify-content: space-between; 
     top: 0;
     right: 0;
     left: 0;
@@ -52,15 +38,6 @@ body{
     color: white;
     text-decoration: none;
 }
-/* .navbar .logo:hover{
-    color: rgb(116, 110, 110);
-    color: #5a3616;
-    transition: 0.6s !important;
-    color: #f3ede0;
-    color: #582308;
-    color: #855f35;
-    
-} */
 .navbar ul{
     display: flex;
     gap: 10%;
@@ -132,6 +109,10 @@ body{
 
 .navbarTwo{
     width: 100%;
+    position: absolute; 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
     display: none;
     z-index: 2;
@@ -157,7 +138,7 @@ body{
     font-weight: 500;
     font-size: 1.2rem;
     padding: 0.7rem;
-    color: #170d07;
+    color: black;
   }
   
   .navbarTwo .nav-container a:hover {
@@ -219,7 +200,10 @@ body{
   
   .navbarTwo .menu-items {
     padding-top: 120px;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    background-color: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* box-shadow: 0 1px 4px rgb(146 161 176 / 15%); */
     height: 100vh;
     width: 100%;
     transform: translate(-150%);
@@ -238,10 +222,10 @@ body{
   }
   
   .logo {
-    position: absolute;
-    top: 5px;
-    right: 15px;
     font-size: 1.2rem;
+    color: white;
+    text-align: right;
+    margin-right: 50px;
   }
   
   .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -250,14 +234,17 @@ body{
   
   .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
     transform: rotate(45deg);
+    background: black;
   }
   
   .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
     transform: scaleY(0);
+    background: black;
   }
   
   .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-45deg);
+    background: black;
   }
   
   .nav-container input[type="checkbox"]:checked ~ .logo {
@@ -266,30 +253,21 @@ body{
   
 @media(max-width: 700px){
     .navbar{
-        /* background-color: #170d07;
-        width: 100vh;
-        color: white;
-        font-size: 20px;
-        position: absolute; 
-        display: flex;
-        top: 0;
-        left: 0; right: 0;
-        height: 80px;
-        display: flex !important;
-        gap: 20% !important; */
         display: none;
-    }
-    .navbar .logo, .navbar .logo p{
-        font-family: montserrat !important;
-        font-size: 30px;
-        cursor: pointer;
-        padding-right: 10px;
-        padding-top: 20px;
     }
     .navbarTwo{
         display: block;
         z-index: 3;
     }
+}
+@media (max-width:900px) {
+  .navbar .logo a{
+    font-family: candara !important;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
 }
 
 
@@ -297,7 +275,8 @@ body{
 .home{
     display: flex;
     flex-direction: column;
-    justify-content: end;    
+    justify-content: end;  
+    width: 100%; 
 }
 .home .homeImg{
     background: url(assets/Images/wp6637119-richard-feynman-wallpapers.jpg);
@@ -323,10 +302,10 @@ body{
 }
 .homeText{
   display: grid;
-grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   justify-content: center;
   align-content: center;
-  gap: 10%;
+  gap: auto;
   margin-top: 100px;
   font-size: 18px;
 }
@@ -396,10 +375,45 @@ grid-template-columns: auto auto;
 
 
 @media (max-width: 700px) {
-    .home{
-        width: 100vh;
+    .homeText{
+      display: grid;
+      grid-template-columns:  auto;
+        justify-content: center;
+        align-content: center;
+        margin-top: 200px;
+        padding: 50px;
+        font-size: 18px;
     }
 }
+@media (max-width: 600px) {
+.home{
+  width: 100vh;
+}
+  .homeText .circles{
+    display: grid;
+    grid-template-columns:  auto;
+    justify-content: center;
+    align-content: center;
+  }
+  .homeText .circlesTwo{
+    margin-top: 20px;
+  }
+} 
+@media (max-width: 400px) {
+  .home{
+    width: 100vh;
+  }
+.home .homeImg{
+  background-position: -500px, 0;
+}
+.homeText{
+  margin-top: 50px;
+}
+}
+
+/* .root{
+  display: none;
+} */
 
 
 /* Biography */
