@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    /* transition: all 1s ease-in-out; */
+    box-sizing: border-box;
+    /* background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0; 
+    margin: 0;
+    font-family: montserrat light, sans-serif;
+}
+
+
+/* NavBar */
+.navbar{
+    position: absolute; 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* background: transparent;
+    background-color: rgba(2, 2, 2, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) saturation(80%); */
+    color: white;
+    font-size: 20px;
+    display: flex;
+    gap: 28%;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    z-index: 2;
+}
+.navbar .logo a{
+    font-family: candara !important;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+/* .navbar .logo:hover{
+    color: rgb(116, 110, 110);
+    color: #5a3616;
+    transition: 0.6s !important;
+    color: #f3ede0;
+    color: #582308;
+    color: #855f35;
+    
+} */
+.navbar ul{
+    display: flex;
+    gap: 10%;
+    list-style: none;
+    cursor: pointer;
+}
+.navbar ul li a{
+    color: white;   
+    text-decoration: none;
+}
+.navbar ul li a:hover{
+    color: #8f592a;
+    transition: 0.6s !important;
+}
+.navbar ul li a::after{
+    color: blue;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdownContent{
+  margin-top: 2px;
+  margin-left: -20px;
+  display: grid;
+  display: none;
+  text-align: center;
+}
+.dropdownContent .tri{
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-bottom: 20px solid black;
+  display: flex;
+  justify-self: center;
+}
+.dropdownContent .actualContent
+{
+  display: grid;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+.dropdownContent .actualContent a{
+  color: white !important;
+}
+.dropdownContent .actualContent a:hover{
+  color: #8f592a !important;
+}
+.dropdownContent .underLine{
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 10px 0 ;
+  background-color: white;
+}
+.dropdown:hover .dropdownContent{
+  display: block;
+  display: grid;
+}
+.dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbarTwo{
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    display: none;
+    z-index: 2;
+}  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vh;
+    height: 62px;
+  }
+  
+  .navbarTwo .menu-items {
+    display: flex;
+  }
+  
+  .navbarTwo .nav-container li {
+    list-style: none;
+  }
+  
+  .navbarTwo .nav-container a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    color: #170d07;
+  }
+  
+  .navbarTwo .nav-container a:hover {
+    font-weight: bolder;
+  }
+  
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .navbarTwo .menu-items {
+    padding-top: 120px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  .navbarTwo .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+  
+@media(max-width: 700px){
+    .navbar{
+        /* background-color: #170d07;
+        width: 100vh;
+        color: white;
+        font-size: 20px;
+        position: absolute; 
+        display: flex;
+        top: 0;
+        left: 0; right: 0;
+        height: 80px;
+        display: flex !important;
+        gap: 20% !important; */
+        display: none;
+    }
+    .navbar .logo, .navbar .logo p{
+        font-family: montserrat !important;
+        font-size: 30px;
+        cursor: pointer;
+        padding-right: 10px;
+        padding-top: 20px;
+    }
+    .navbarTwo{
+        display: block;
+        z-index: 3;
+    }
+}
+
+
+/* Home */
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;    
+}
+.home .homeImg{
+    background: url(assets/Images/wp6637119-richard-feynman-wallpapers.jpg);
+    background-attachment: fixed;
+    background-position: 0 -120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+    width: 100%;
+    height: 80vh;
+    /* position: absolute;
+    top: 0;
+    left: 0; right: 0;
+    z-index: -1; */
+}
+.home .firstText{
+    font-size: 60px;
+    background-color: #170d07;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+.homeText{
+  display: grid;
+grid-template-columns: auto auto;
+  justify-content: center;
+  align-content: center;
+  gap: 10%;
+  margin-top: 100px;
+  font-size: 18px;
+}
+.homeText a{
+  text-decoration: none;
+  color: #5a3616;
+}
+.homeText a:hover{
+  color: blue;
+}
+.homeText .circles{
+  display: flex;
+  gap: 5%;
+  text-align: center;
+}
+.homeText .quote{
+  font-size: 40px;
+  line-height: 90%;
+  padding: 10px 0px 0 20px;
+  background-image: url(assets/Images/dropQuote.png);
+  background-repeat: no-repeat;
+}
+.homeText .quote .quoteImg{
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+}
+.homeText .quote .dpImg{
+  width: 70px;
+  height: 70px;
+  background-color: #170d07;
+  background: url(assets/Images/headshot.png);
+  border-radius: 100%;
+  margin: 15px 10px 0px 0px;
+}
+.homeText .bioLink, .homeText .careerLink, .homeText .photoGallery, .homeText .books
+{
+  width: 200px;
+  height: 200px;
+  background-color: #170d07;
+  border-radius: 100%;
+  background: no-repeat;
+}
+.homeText .bioLink{
+ background: url(assets/Images/01.png);
+ 
+}
+.homeText .careerLink{
+  background: url(assets/Images/02.png);
+}
+.homeText .photoGallery{
+  background: url(assets/Images/03.png);
+}
+.homeText .books{
+  background: url(assets/Images/04.png);
+}
+.homeText .video{
+    color: white;
+    align-self: center;
+    justify-content: end;
+    text-align: center;
+}
+.homeText .video p{
+  font-size: 14px;
+  color: #170d07;
+}
+
+
+@media (max-width: 700px) {
+    .home{
+        width: 100vh;
+    }
+}
+
+
+/* Biography */
+.bio{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;    
+}
+.bio .bioImg{
+  background: url(assets/Images/4022617.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 2s;
+  width: 100%;
+  height: 80vh;
+}
+.bio .firstText{
+  font-size: 60px;
+  background-color: #170d07;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+.bioText{
+  padding: 50px;
+  display: grid;
+grid-template-columns: auto auto;
+gap: 2%;
+justify-content: center;
+}
+.bioText .dpImg{
+  padding-left: 20px;
+  background-image: url(assets/Images/bioIMG1.png);
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+
+/* Career */
+.career{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;    
+}
+.career .careerImg{
+  background: url(assets/Images/4022606.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 2s;
+  width: 100%;
+  height: 80vh;
+}
+.career .firstText{
+  font-size: 60px;
+  background-color: #170d07;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/* Awards */
+.award{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;    
+}
+.award .awardImg{
+  background: url(assets/Images/4022621.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 2s;
+  width: 100%;
+  height: 80vh;
+}
+.award .firstText{
+  font-size: 60px;
+  background-color: #170d07;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/* Books */
+.book{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;    
+}
+.book .bookImg{
+  background: url(assets/Images/wp6637135-richard-feynman-wallpapers.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 2s;
+  width: 100%;
+  height: 80vh;
+}
+.book .firstText{
+  font-size: 60px;
+  background-color: #170d07;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/* Scrolling Ticker */
+#ticker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+}
